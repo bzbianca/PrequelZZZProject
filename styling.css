@@ -1,0 +1,49 @@
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#introChars {
+    
+    position: relative;
+    border-radius: 20px;
+    width: 800px;
+    padding: 10px;
+    background-color: black
+}
+
+#test {
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translate(-50%, -50%); /* center the button */
+  z-index: 2; /* set a higher z-index than the image */
+  color: #fff; /* set your desired text color */
+  border: none; /* remove button border */
+  padding: 10px 20px; /* set your desired padding */
+  cursor: pointer; /* change mouse cursor on hover */
+}
+
+#test:hover {
+    background-color: black;
+}
+
+#selectCorin {
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%); /* center the button */
+    z-index: 2; /* set a higher z-index than the image */
+    border-color: yellow;
+    color: black; /* set your desired text color */
+    border: 10px; /* remove button border */
+    padding: 10px 20px; /* set your desired padding */
+    cursor: pointer; /* change mouse cursor on hover */
+}
+
+#selectCorin:hover {
+    background-color: red;
+}
