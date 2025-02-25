@@ -88,7 +88,7 @@ body {
     left:42.5%;
     transform: translate(-96%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: purple;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -108,7 +108,7 @@ body {
     left:50.5%;
     transform: translate(-44%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: black;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -128,7 +128,7 @@ body {
     left:58.8%;
     transform: translate(5%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: red;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -148,7 +148,7 @@ body {
     left:67%;
     transform: translate(55%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: gray;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
