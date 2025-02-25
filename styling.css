@@ -206,24 +206,33 @@ body {
 }
 
 #corinAgent {
+    background-image: url(characterImgs/Agent_Corin_Wickes_Icon.png);
+    background-color: purple;
+    background-size: 100% 100%;
     position: absolute;
-    transform: translate(135%, -10%);
-    border: none;
-    background: transparent;
-    padding: 10px;
+    transform: translate(-50%, -10%);
+    border-width: 15px;
+    border-radius: 10px;
+    border-color: purple;
+    padding: 100px;
 }
 
 #corinAgent:hover {
     background-color: #aac200;
+    border-color: #aac200;
 }
 
 
 #lycaonAgent {
+    background-image: url(characterImgs/Agent_Von_Lycaon_Icon.png);
+    background-color: purple;
+    background-size: 100% 100%;
     position: absolute;
-    transform: translate(255%, -10%);
-    border: none;
-    background: transparent;
-    padding: 10px;
+    transform: translate(135%, -10%);
+    border-width: 15px;
+    border-radius: 10px;
+    border-color: purple;
+    padding: 100px;
 }
 
 #lycaonAgent:hover {
@@ -231,11 +240,15 @@ body {
 }
 
 #rinaAgent {
+    background-image: url(characterImgs/Agent_Alexandrina_Sebastiane_Icon.png);
+    background-color: purple;
+    background-size: 100% 100%;
     position: absolute;
-    transform: translate(375%, -10%);
-    border: none;
-    background: transparent;
-    padding: 10px;
+    transform: translate(135%, -10%);
+    border-width: 15px;
+    border-radius: 10px;
+    border-color: purple;
+    padding: 100px;
 }
 
 #rinaAgent:hover {

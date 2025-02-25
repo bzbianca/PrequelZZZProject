@@ -92,7 +92,7 @@ agentSelectButton.addEventListener("click", function(){
         agentLycaon.remove()
         agentRina.remove()
         // create a new button to confirm and go to the next node
-        let agentconfirmCorin = document.createElement("button");
+        var agentconfirmCorin = document.createElement("button");
         agentconfirmCorin.classList.add("agentButtons");
         agentconfirmCorin.id = "corinAgent"
         let agentCorinImg = document.createElement("img")
@@ -141,6 +141,25 @@ agentSelectButton.addEventListener("click", function(){
     })
 })
 
-// agentconfirmRina.addEventListener("click", function() {
-    
+
+// Battle Phase 
+
+let health;
+let atk;
+
+/// Each character (Corin, Lycaon, Rina)
+
+
+function battleCorin() {
+    health = 11;
+    atk = 50;
+}
+
+
+let introBox = document.getElementsByClassName("intro");
+
+let agentconfirmCorin = document.getElementById("corinAgent");
+console.log(agentconfirmCorin)
+// agentconfirmCorin.addEventListener("click", function() {
+//     introBox.remove()
 // })
