@@ -44,8 +44,42 @@ let corinAgent = document.getElementById("corinAgent"); // Corin's agent button
 let lycaonAgent = document.getElementById("lycaonAgent"); // Lycaon's agent button
 let rinaAgent = document.getElementById("rinaAgent"); // Rina's agent button
 
+////////////////////// VARIABLE MAKING FOR AGENT SELECTION & MAIN STORY//////////////////////
+
 // message ids into variables
 let uhOh = document.getElementById("uhOh")
+let instructions = document.getElementById("instructions")
+let letsfindClues = document.getElementById("letsfindClues")
+
+
+
+
+// LOCATION BUTTON VARIABLES //
+const sixthStreet = document.getElementById("sixthStreet")
+const balletTwins = document.getElementById("balletTwins")
+const brantStreet = document.getElementById("brantStreet")
+const portElpis = document.getElementById("portElpis")
+const luminaSquare = document.getElementById("luminaSquare")
+
+// LOCATION MENU FUNCTION //
+let locationCount = document.getElementById("locationCount")
+let counting = 3
+
+function locationMenu() {
+    sixthStreet.style.visibility = "visible"
+    balletTwins.style.visibility = "visible"
+    brantStreet.style.visibility = "visible"
+    portElpis.style.visibility = "visible"
+    luminaSquare.style.visibility = "visible"
+    instructions.style.visibility = "visible"
+    letsfindClues.style.visibility = "visible"
+    locationCount.style.visibility = "visible"
+
+    locationCount.innerHTML = `Locations Left: 3 / ${counting}`
+    //console.log(locationCount)
+    counting -= 1
+    //console.log(counting)
+}
 
 
 // agent selection process button press
@@ -72,6 +106,9 @@ agentSelectButton.addEventListener("click", function(){
         corinAgent.style.visibility = "hidden"
         lycaonAgent.style.visibility = "hidden"
         rinaAgent.style.visibility = "hidden"
+
+        // open location menu
+        locationMenu()
     })
 
     // lycaon's button was pressed
@@ -82,6 +119,9 @@ agentSelectButton.addEventListener("click", function(){
         corinAgent.style.visibility = "hidden"
         lycaonAgent.style.visibility = "hidden"
         rinaAgent.style.visibility = "hidden"
+
+        // open location menu
+        locationMenu()
     })
 
     // rina's button was pressed
@@ -92,6 +132,9 @@ agentSelectButton.addEventListener("click", function(){
         corinAgent.style.visibility = "hidden"
         lycaonAgent.style.visibility = "hidden"
         rinaAgent.style.visibility = "hidden"
+
+        // open location menu
+        locationMenu()
     })
 
 })

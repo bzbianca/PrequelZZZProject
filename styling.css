@@ -278,6 +278,7 @@ body {
     position: absolute;
     border: none;
     padding: 200px;
+    visibility: hidden;
 }
 
 .locationButtons:hover {
