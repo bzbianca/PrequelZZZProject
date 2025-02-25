@@ -8,11 +8,29 @@
 </head>
 <body>
     <section class="intro">
-        <img id="introChars" src="backgroundImgs/introImgs/Desktop_Screenshot_2025.02.23_-_22.44.02.06.jpeg">
-        <input id="test" type="image" src="uiImgs/buttonImgs/Icon_Agents.png">
-        <input id="selectCorin">
+        <p id="title" class="defaultStyle">Where is Ellen?</p>
+        <p id="introTitle" class="titleStyle">Character Introductions</p>
+        <img id="introChars" src="backgroundImgs/introImgs/1selectedCorin.jpeg">
+        <input type="button" id="selectCorin">
+        <input type="button" id="selectLycaon">
+        <input type="button" id="selectEllen">
+        <input type="button" id="selectRina">
+        <div class="introDesc" id="descIntro">
+            A shy and timid girl who is very soft-spoken. Whenever there is a need to speak up and talk to strangers, she stutters and no one can hear anything she says. However, when she is around her friends like Ellen or Rina, she is a kind and lovable person who cares about her friends well-being.
+        </div>
     </section>
+
+    <section class="agents">
+        <p class="defaultStyle" id="timeToPick">Now that you know everyone, it's time to select a character to play as! Click the Agent Select Button to get started.</p>
+        <input id="agentSelect" type="image" src="uiImgs/buttonImgs/Icon_Agents.png">
+        <p class="defaultStyle" id="uhOh"></p> <!--Message: That's weird Ellen isn't on here? Pick a character and we will go and find out where she is.-->
+        <input type="button" id="agentCorin">
+        <input type="button" id="agentLycaon">
+        <input type="button" id="agentEllen">
+        <input type="button" id="agentRina">
+    </section>
+
     
-    <script src="prequel.js"></script>
+    <script src="prequel.js" defer></script>
 </body>
 </html>

@@ -1,3 +1,37 @@
+
+/* ZZZ custom font */
+@font-face {
+    font-family: 'zzzfont';
+    src: url(ZZZfont.ttf) format('truetype');
+}
+
+/* text style */
+.defaultStyle {
+    color: white;
+}
+
+.titleStyle {
+    color: white;
+    -webkit-text-stroke: 2px rgb(173, 173, 173);
+}
+
+body {
+    background-color: lightslategray;
+    font-family: 'zzzfont';
+    background-image: url(backgroundImgs/characterscreenbackground.png);
+    background-size: 1250px;
+}
+
+#title {
+    color: white;
+    text-shadow: -5px -5px 0 gray, 5px -5px 0 black, 5px 5px 0 black, 5px 5px 0 black;
+    font-size: 50px;
+}
+
+#introTitle {
+    font-size: 40px;
+}
+
 .intro {
     display: flex;
     align-items: center;
@@ -6,44 +40,144 @@
     text-align: center;
 }
 
-#introChars {
-    
+
+.introDesc {
+    color: #c8c8c8;
     position: relative;
-    border-radius: 20px;
+    top: -525px;
+    left: 115px;
+    height: 225px;
     width: 800px;
-    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+#introChars {
+    border-radius: 20px;
+    width: 1250px;
+    padding: 20px;
     background-color: black
 }
 
-#test {
-    position: absolute;
-    top:10%;
-    left:50%;
-    transform: translate(-50%, -50%); /* center the button */
-  z-index: 2; /* set a higher z-index than the image */
-  color: #fff; /* set your desired text color */
-  border: none; /* remove button border */
-  padding: 10px 20px; /* set your desired padding */
-  cursor: pointer; /* change mouse cursor on hover */
-}
 
-#test:hover {
-    background-color: black;
-}
 
+/* CORIN SELECTION BUTTON */
 #selectCorin {
     position: absolute;
-    top:40%;
-    left:50%;
+    top:68.8%;
+    left:42.5%;
     transform: translate(-50%, -50%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    border-color: yellow;
+    background: purple;
     color: black; /* set your desired text color */
-    border: 10px; /* remove button border */
-    padding: 10px 20px; /* set your desired padding */
+    border: none; /* remove button border */
+    border-radius: 10px;
+    padding: 57.5px 100px; /* set your desired padding */
+    cursor: pointer; /* change mouse cursor on hover */
+}
+/*
+#selectCorin:hover {
+    background-color: purple;
+}
+*/
+
+/* LYCAON SELECTION BUTTON*/
+#selectLycaon {
+    position: absolute;
+    top:68.8%;
+    left:50.5%;
+    transform: translate(-50%, -50%); /* center the button */
+    z-index: 2; /* set a higher z-index than the image */
+    background: black;
+    color: black; /* set your desired text color */
+    border: none; /* remove button border */
+    border-radius: 10px;
+    padding: 57.5px 100px; /* set your desired padding */
+    cursor: pointer; /* change mouse cursor on hover */
+}
+/*
+#selectLycaon:hover {
+    background-color: black;
+}
+*/
+
+/* ELLEN SELECTION BUTTON*/
+#selectEllen {
+    position: absolute;
+    top:68.8%;
+    left:58.8%;
+    transform: translate(-50%, -50%); /* center the button */
+    z-index: 2; /* set a higher z-index than the image */
+    background: red;
+    color: black; /* set your desired text color */
+    border: none; /* remove button border */
+    border-radius: 10px;
+    padding: 57.5px 100px; /* set your desired padding */
+    cursor: pointer; /* change mouse cursor on hover */
+}
+/*
+#selectEllen:hover {
+    background-color: red;
+}
+*/
+
+/* RINA SELECTION BUTTON */
+#selectRina {
+    position: absolute;
+    top:68.8%;
+    left:67%;
+    transform: translate(-50%, -50%); /* center the button */
+    z-index: 2; /* set a higher z-index than the image */
+    background: gray;
+    color: black; /* set your desired text color */
+    border: none; /* remove button border */
+    border-radius: 10px;
+    padding: 57.5px 100px; /* set your desired padding */
+    cursor: pointer; /* change mouse cursor on hover */
+}
+/*
+#selectRina:hover {
+    background-color: gray;
+}
+*/
+
+
+/* AGENT SELECT */
+
+.agents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#timeToPick {
+    font-size: 30px;
+}
+
+#agentSelect {
+    position: relative;
+    top:50px;
+    left:3%;
+    transform: translate(-50%, -50%); /* center the button */
+    z-index: 2; /* set a higher z-index than the image */
+    color: #fff; /* set your desired text color */
+    border: none; /* remove button border */
+    border-radius: 50%;
+    padding: 10px 10px; /* set your desired padding */
     cursor: pointer; /* change mouse cursor on hover */
 }
 
-#selectCorin:hover {
-    background-color: red;
+#agentSelect:hover {
+    background-color: #aac200;
 }
+
+#uhOh {
+    font-size: 30px;
+}
+
+
