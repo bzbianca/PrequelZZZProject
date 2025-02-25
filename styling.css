@@ -12,8 +12,10 @@
 
 .titleStyle {
     color: white;
-    -webkit-text-stroke: 2px rgb(173, 173, 173);
 }
+
+
+
 
 body {
     background-color: lightslategray;
@@ -71,7 +73,7 @@ body {
     left:42.5%;
     transform: translate(-50%, -50%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: purple;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -91,7 +93,7 @@ body {
     left:50.5%;
     transform: translate(-50%, -50%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: black;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -111,7 +113,7 @@ body {
     left:58.8%;
     transform: translate(-50%, -50%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: red;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -131,7 +133,7 @@ body {
     left:67%;
     transform: translate(-50%, -50%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: gray;
+    background: transparent;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -181,3 +183,44 @@ body {
 }
 
 
+#corinAgent {
+    position: relative;
+    left: 28%;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+#corinAgent:hover {
+    background-color: #aac200;
+}
+
+
+#lycaonAgent {
+    position: relative;
+    left: 32%;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+#lycaonAgent:hover {
+    background-color: #aac200;
+}
+
+#rinaAgent {
+    position: relative;
+    left: 36%;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+#rinaAgent:hover {
+    background-color: #aac200;
+}
+
+
+#youPicked {
+    font-size: 30px;
+}
