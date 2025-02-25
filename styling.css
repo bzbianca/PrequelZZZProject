@@ -176,6 +176,8 @@ body {
     font-size: 30px;
 }
 
+
+
 #agentSelect {
     position: relative;
     top:50px;
@@ -197,10 +199,15 @@ body {
     font-size: 30px;
 }
 
+.agentButtons {
+    position: relative;
+    width: 1;
+    height: 1;
+}
 
 #corinAgent {
-    position: relative;
-    left: 28%;
+    position: absolute;
+    transform: translate(135%, -10%);
     border: none;
     background: transparent;
     padding: 10px;
@@ -212,8 +219,8 @@ body {
 
 
 #lycaonAgent {
-    position: relative;
-    left: 32%;
+    position: absolute;
+    transform: translate(255%, -10%);
     border: none;
     background: transparent;
     padding: 10px;
@@ -224,8 +231,8 @@ body {
 }
 
 #rinaAgent {
-    position: relative;
-    left: 36%;
+    position: absolute;
+    transform: translate(375%, -10%);
     border: none;
     background: transparent;
     padding: 10px;

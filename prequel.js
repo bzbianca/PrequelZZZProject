@@ -48,6 +48,7 @@ rinaButton.addEventListener("click", function(){
 
 // agent select
 
+
 const agentSelectButton = document.getElementById("agentSelect");
 const descBox = document.getElementById("descIntro");
 
@@ -56,8 +57,8 @@ agentSelectButton.addEventListener("click", function(){
     document.getElementById("uhOh").innerHTML = "That's weird Ellen isn't on here? Let's pick a character first then we'll go and find out where she is."
 
     let agentCorin = document.createElement("button");
+    agentCorin.classList.add("agentButtons");
     agentCorin.id = "corinAgent"
-    agentCorin.class = "agentHover"
     let agentCorinImg = document.createElement("img")
     agentCorinImg.src = "characterImgs/Agent_Corin_Wickes_Icon.png"
     agentCorin.appendChild(agentCorinImg)
@@ -65,6 +66,7 @@ agentSelectButton.addEventListener("click", function(){
     document.body.appendChild(agentCorin)
 
     let agentLycaon = document.createElement("button");
+    agentLycaon.classList.add("agentButtons");
     agentLycaon.id = "lycaonAgent"
     let agentLycaonImg = document.createElement("img")
     agentLycaonImg.src = "characterImgs/Agent_Von_Lycaon_Icon.png"
@@ -74,6 +76,7 @@ agentSelectButton.addEventListener("click", function(){
 
 
     let agentRina = document.createElement("button");
+    agentRina.classList.add("agentButtons");
     agentRina.id = "rinaAgent"
     let agentRinaImg = document.createElement("img")
     agentRinaImg.src = "characterImgs/Agent_Alexandrina_Sebastiane_Icon.png"
@@ -82,71 +85,62 @@ agentSelectButton.addEventListener("click", function(){
     document.body.appendChild(agentRina)
 
     let picked = document.getElementById("youPicked");
-    let oneRunThrough = true;
 
     agentCorin.addEventListener("click", function(){
-
-        function removeButtons() {
-            agentRina.remove()
-            agentLycaon.remove()
-            agentCorin.style = "left: 43%";
-            picked.innerHTML = "You picked Corin! Click Corin again to continue on."
-        }
-        function nextPage() {
-            agentCorin.style = "display: none;";
-        }
-        if (oneRunThrough) {
-            removeButtons()
-            oneRunThrough = false;
-            console.log(oneRunThrough)
-        } else {
-            nextPage()
-            console.log("yes")
-        }
-    })
+        // remove agent selection buttons
+        agentCorin.remove()
+        agentLycaon.remove()
+        agentRina.remove()
+        // create a new button to confirm and go to the next node
+        let agentconfirmCorin = document.createElement("button");
+        agentconfirmCorin.classList.add("agentButtons");
+        agentconfirmCorin.id = "corinAgent"
+        let agentCorinImg = document.createElement("img")
+        agentCorinImg.src = "characterImgs/Agent_Corin_Wickes_Icon.png"
+        agentconfirmCorin.appendChild(agentCorinImg)
+        document.body.appendChild(agentconfirmCorin)
+        agentconfirmCorin.style = "transform: translate(260%, -10%);";
+        // prompt to click again to continue on
+        picked.innerHTML = "You picked Corin! Click Corin again to continue on."
+})
 
     agentLycaon.addEventListener("click", function(){
-
-        function removeButtons() {
-            agentCorin.remove()
-            agentRina.remove()
-            agentLycaon.style = "left: 43%";
-            picked.innerHTML = "You picked Lycaon! Click Lycaon again to continue on."
-        }
-        function nextPage() {
-            agentLycaon.style = "display: none;";
-        }
-        if (oneRunThrough) {
-            removeButtons()
-            oneRunThrough = false;
-            console.log(oneRunThrough)
-        } else {
-            nextPage()
-            console.log("yes")
-        }
-    })
-
+        // remove agent selection buttons
+        agentCorin.remove()
+        agentLycaon.remove()
+        agentRina.remove()
+        // create a new button to confirm and go to the next node
+        let agentconfirmLycaon = document.createElement("button");
+        agentconfirmLycaon.classList.add("agentButtons");
+        agentconfirmLycaon.id = "lycaonAgent"
+        let agentLycaonImg = document.createElement("img")
+        agentLycaonImg.src = "characterImgs/Agent_Von_Lycaon_Icon.png"
+        agentconfirmLycaon.appendChild(agentLycaonImg)
+        document.body.appendChild(agentconfirmLycaon)
+        agentconfirmLycaon.style = "transform: translate(260%, -10%);";
+        // prompt to click again to continue on
+        picked.innerHTML = "You picked Lycaon! Click Lycaon again to continue on."
+})
     
     agentRina.addEventListener("click", function(){
-
-        function removeButtons() {
-            agentCorin.remove()
-            agentLycaon.remove()
-            agentRina.style = "left: 43%";
-            picked.innerHTML = "You picked Rina! Click Rina again to continue on."
-        }
-        function nextPage() {
-            agentRina.style = "display: none;";
-        }
-        if (oneRunThrough) {
-            removeButtons()
-            oneRunThrough = false;
-            console.log(oneRunThrough)
-        } else {
-            nextPage()
-            console.log("yes")
-        }
+        // remove agent selection buttons
+        agentCorin.remove()
+        agentLycaon.remove()
+        agentRina.remove()
+        // create a new button to confirm and go to the next node
+        let agentconfirmRina = document.createElement("button");
+        agentconfirmRina.classList.add("agentButtons");
+        agentconfirmRina.id = "rinaAgent"
+        let agentRinaImg = document.createElement("img")
+        agentRinaImg.src = "characterImgs/Agent_Alexandrina_Sebastiane_Icon.png"
+        agentconfirmRina.appendChild(agentRinaImg)
+        document.body.appendChild(agentconfirmRina)
+        agentconfirmRina.style = "transform: translate(260%, -10%);";
+        // prompt to click again to continue on
+        picked.innerHTML = "You picked Rina! Click Rina again to continue on."
     })
 })
 
-// PLEASE, FIGURE OUT HOW TO GO TO NEXT PAGE/CHANGE PAGE
+// agentconfirmRina.addEventListener("click", function() {
+    
+// })
