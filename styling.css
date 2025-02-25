@@ -24,6 +24,17 @@ body {
     background-size: 1250px;
 }
 
+#cluesList {
+    color: white;
+    background-color: #363435;
+    position: fixed;
+    top: auto;
+    left: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: white;
+}
+
 #title {
     color: white;
     text-shadow: -5px -5px 0 gray, 5px -5px 0 black, 5px 5px 0 black, 5px 5px 0 black;
@@ -64,16 +75,20 @@ body {
     background-color: black
 }
 
-
+.selectContainer {
+    position: relative;
+    width: 1;
+    height: 1;
+}
 
 /* CORIN SELECTION BUTTON */
 #selectCorin {
     position: absolute;
-    top:68.8%;
+    top:79.8%;
     left:42.5%;
-    transform: translate(-50%, -50%); /* center the button */
+    transform: translate(-96%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: transparent;
+    background: purple;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -91,9 +106,9 @@ body {
     position: absolute;
     top:68.8%;
     left:50.5%;
-    transform: translate(-50%, -50%); /* center the button */
+    transform: translate(-44%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: transparent;
+    background: black;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -111,9 +126,9 @@ body {
     position: absolute;
     top:68.8%;
     left:58.8%;
-    transform: translate(-50%, -50%); /* center the button */
+    transform: translate(5%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: transparent;
+    background: red;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
@@ -131,9 +146,9 @@ body {
     position: absolute;
     top:68.8%;
     left:67%;
-    transform: translate(-50%, -50%); /* center the button */
+    transform: translate(55%, -167%); /* center the button */
     z-index: 2; /* set a higher z-index than the image */
-    background: transparent;
+    background: gray;
     color: black; /* set your desired text color */
     border: none; /* remove button border */
     border-radius: 10px;
