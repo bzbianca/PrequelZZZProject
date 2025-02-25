@@ -35,10 +35,68 @@ rinaButton.addEventListener("click", function(){
     document.getElementById("descIntro").innerHTML = rinaDesc;
 })
 
-// agent selection
+/////////////// AGENT SELECTION
 
 const agentSelectButton = document.getElementById("agentSelect");
+let mainAgent; // declare main agent variable, will store main character
+
+let corinAgent = document.getElementById("corinAgent"); // Corin's agent button
+let lycaonAgent = document.getElementById("lycaonAgent"); // Lycaon's agent button
+let rinaAgent = document.getElementById("rinaAgent"); // Rina's agent button
+
+// message ids into variables
+let uhOh = document.getElementById("uhOh")
+
+
+// agent selection process button press
 
 agentSelectButton.addEventListener("click", function(){
-    agentSelectButton.style = "display: none;";
+    agentSelectButton.style.visibility = "hidden";
+    corinAgent.style.visibility = "visible"
+    lycaonAgent.style.visibility = "visible"
+    rinaAgent.style.visibility = "visible"
+
+    // display uhOh message
+    uhOh.style.visibility = "visible"
+
+    /// agent buttons and messages
+
+    let agentPicked = document.getElementById("youPicked")
+    let currentAgent = document.getElementById("currentAgent")
+
+    // corin's button was pressed
+    corinAgent.addEventListener("click", function(){
+        mainAgent = "Corin"
+        agentPicked.innerHTML = "You picked Corin!"
+        currentAgent.innerHTML = "Current Agent: Corin"
+        corinAgent.style.visibility = "hidden"
+        lycaonAgent.style.visibility = "hidden"
+        rinaAgent.style.visibility = "hidden"
+    })
+
+    // lycaon's button was pressed
+    lycaonAgent.addEventListener("click", function(){
+        mainAgent = "Lycaon"
+        agentPicked.innerHTML = "You picked Lycaon!"
+        currentAgent.innerHTML = "Current Agent: Lycaon"
+        corinAgent.style.visibility = "hidden"
+        lycaonAgent.style.visibility = "hidden"
+        rinaAgent.style.visibility = "hidden"
+    })
+
+    // rina's button was pressed
+    rinaAgent.addEventListener("click", function(){
+        mainAgent = "Rina"
+        agentPicked.innerHTML = "You picked Rina!"
+        currentAgent.innerHTML = "Current Agent: Rina"
+        corinAgent.style.visibility = "hidden"
+        lycaonAgent.style.visibility = "hidden"
+        rinaAgent.style.visibility = "hidden"
+    })
+
 })
+
+
+
+
+

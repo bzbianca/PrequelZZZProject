@@ -24,16 +24,6 @@ body {
     background-size: 1250px;
 }
 
-#cluesList {
-    color: white;
-    background-color: #363435;
-    position: fixed;
-    top: auto;
-    left: auto;
-    padding: 20px;
-    border-radius: 10px;
-    border-color: white;
-}
 
 #title {
     color: white;
@@ -210,7 +200,7 @@ body {
     background-color: purple;
     background-size: 100% 100%;
     position: absolute;
-    transform: translate(-50%, -10%);
+    transform: translate(-200%, -10%);
     border-width: 15px;
     border-radius: 10px;
     border-color: purple;
@@ -225,37 +215,98 @@ body {
 
 #lycaonAgent {
     background-image: url(characterImgs/Agent_Von_Lycaon_Icon.png);
-    background-color: purple;
+    background-color: rgb(12, 90, 109);
     background-size: 100% 100%;
     position: absolute;
-    transform: translate(135%, -10%);
+    transform: translate(-50%, -10%);
     border-width: 15px;
     border-radius: 10px;
-    border-color: purple;
+    border-color: rgb(12, 90, 109);
     padding: 100px;
 }
 
 #lycaonAgent:hover {
     background-color: #aac200;
+    border-color: #aac200;
 }
 
 #rinaAgent {
     background-image: url(characterImgs/Agent_Alexandrina_Sebastiane_Icon.png);
-    background-color: purple;
+    background-color: rgb(153, 22, 22);
     background-size: 100% 100%;
     position: absolute;
-    transform: translate(135%, -10%);
+    transform: translate(100%, -10%);
     border-width: 15px;
     border-radius: 10px;
-    border-color: purple;
+    border-color: rgb(153, 22, 22);
     padding: 100px;
 }
 
 #rinaAgent:hover {
     background-color: #aac200;
+    border-color: #aac200;
 }
 
 
-#youPicked {
+
+/* STORY GAME */
+
+#cluesList {
+    color: white;
+    background-color: #363435;
+    position: fixed;
+    top: auto;
+    left: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: white;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     font-size: 30px;
+}
+
+.locationButtons {
+    background-color: transparent;
+    background-size: 110% 100%;
+    background-position: center;
+    position: absolute;
+    border: none;
+    padding: 200px;
+}
+
+.locationButtons:hover {
+    background-color: #aac200;
+    border-radius: 30%;
+}
+
+#sixthStreet {
+    background-image: url(uiImgs/locationImgs/1District_Sixth_Street_Icon.png);
+    transform: translate(-130%, 10%);
+    line-height: bottom;
+}
+
+#balletTwins {
+    background-image: url(uiImgs/locationImgs/2District_Ballet_Twins_Road_Icon.png);
+    transform: translate(0%, 10%);
+}
+
+#brantStreet {
+    background-image: url(uiImgs/locationImgs/3District_Brant_Street_Construction_Site_Icon.png);
+    transform: translate(130%, 10%);
+}
+
+#portElpis {
+    background-image: url(uiImgs/locationImgs/4District_Port_Elpis_Icon.png);
+    transform: translate(-70%, 120%);
+}
+
+#luminaSquare {
+    background-image: url(uiImgs/locationImgs/5District_Lumina_Square_Icon.png);
+    transform: translate(70%, 120%);
 }
