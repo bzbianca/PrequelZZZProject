@@ -291,28 +291,28 @@ body {
 
 #sixthStreet {
     background-image: url(uiImgs/locationImgs/1District_Sixth_Street_Icon.png);
-    transform: translate(-130%, 10%);
+    transform: translate(-130%, -500%);
     line-height: bottom;
 }
 
 #balletTwins {
     background-image: url(uiImgs/locationImgs/2District_Ballet_Twins_Road_Icon.png);
-    transform: translate(0%, 10%);
+    transform: translate(0%, -500%);
 }
 
 #brantStreet {
     background-image: url(uiImgs/locationImgs/3District_Brant_Street_Construction_Site_Icon.png);
-    transform: translate(130%, 10%);
+    transform: translate(130%, -500%);
 }
 
 #portElpis {
     background-image: url(uiImgs/locationImgs/4District_Port_Elpis_Icon.png);
-    transform: translate(-70%, 120%);
+    transform: translate(-70%, -380%);
 }
 
 #luminaSquare {
     background-image: url(uiImgs/locationImgs/5District_Lumina_Square_Icon.png);
-    transform: translate(70%, 120%);
+    transform: translate(70%, -380%);
 }
 
 /* BACK BUTTON */
@@ -321,11 +321,12 @@ body {
     background-size: contain;
     background-color: transparent;
     background-position: center;
-    position: absolute;
+    position: fixed;
     border: none;
     padding: 120px;
     visibility: visible;
-    transform: translate(-380%, -170%);
+    top:600px;
+    left: 30px
 }
 
 /* CLUES */
@@ -346,9 +347,6 @@ body {
     background-color: #aac200;
 }
 
-#sixclue {
-    transform: translate(-400%, -450%);
-}
 
 
 /* SIXTH STREET */
@@ -356,7 +354,7 @@ body {
 #sixthStreet_Title {
     font-size: 50px;
     position: absolute;
-    transform: translate(130%, -1750%);
+    transform: translate(126%, -1300%);
 }
 
 #sixthStreet_IMG {
@@ -364,6 +362,101 @@ body {
     width: 1250px;
     padding: 20px;
     background-color: black;
+    transform: translate(0%, -100%);
+}
+
+#sixclue {
+    transform: translate(-400%, -270%);
+}
+
+#sixcluemsg {
+    position: absolute;
+    transform: translate(242%, 100%);
+}
+
+/* BALLET TWINS */
+
+#balletTwins_Title {
+    font-size: 50px;
+    position: absolute;
+    transform: translate(130%, -1750%);
+}
+
+#balletTwins_IMG {
+    border-radius: 20px;
+    width: 1250px;
+    padding: 20px;
+    background-color: black;
     transform: translate(0%, -140%);
 }
 
+#balletclue {
+    transform: translate(-400%, -450%);
+}
+
+/* BRANT STREET */
+
+#brantStreet_Title {
+    font-size: 50px;
+    position: absolute;
+    transform: translate(130%, -1750%);
+}
+
+#brantStreet_IMG {
+    border-radius: 20px;
+    width: 1250px;
+    padding: 20px;
+    background-color: black;
+    transform: translate(0%, -140%);
+}
+
+#brantclue1 {
+    transform: translate(-400%, -450%);
+}
+#brantclue2 {
+    transform: translate(-200%, -450%);
+}
+
+/* PORT ELPIS */
+
+#portElpis_Title {
+    font-size: 50px;
+    position: absolute;
+    transform: translate(130%, -1750%);
+}
+
+#portElpis_IMG {
+    border-radius: 20px;
+    width: 1250px;
+    padding: 20px;
+    background-color: black;
+    transform: translate(0%, -140%);
+}
+
+#portclue1 {
+    transform: translate(-400%, -450%);
+}
+
+#portclue2 {
+    transform: translate(-200%, -450%);
+}
+
+/* BALLET TWINS */
+
+#luminaSquare_Title {
+    font-size: 50px;
+    position: absolute;
+    transform: translate(130%, -1750%);
+}
+
+#luminaSquare_IMG {
+    border-radius: 20px;
+    width: 1250px;
+    padding: 20px;
+    background-color: black;
+    transform: translate(0%, -140%);
+}
+
+#luminaclue {
+    transform: translate(-400%, -450%);
+}

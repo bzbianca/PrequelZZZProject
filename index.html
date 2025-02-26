@@ -43,7 +43,9 @@
     <br>
     <br>
     <br>
+    <input type="button" id="backButton" style="visibility: hidden;">
     <section class="main">
+        <input type="button" id="backButton" style="visibility: hidden;">
         <h1 class="defaultStyle" style="visibility: hidden;">So where is she?</h1>
         <p class="defaultStyle" id="instructions" style="visibility: hidden;">Huh? Where is Ellen? Maybe she went off the Hollows. Seems like we have to go look for her.</p>
         <p class="defaultStyle" id="letsfindClues" style="visibility: hidden;">Let's look for clues. Only 3 locations can be explored.</p>
@@ -56,12 +58,40 @@
         <input class="locationButtons" type="button" id="portElpis">
         <input class="locationButtons" type="button" id="luminaSquare">
         <br><br><br><br><br><br><br><br><br><br><br><br>
-        <input type="button" id="backButton" style="visibility: hidden;">
         <section class="sixthGroup" id="groupSixth">
+            <p class="defaultStyle" id="sixcluemsg" style="visibility: hidden;">Sixth Street</p>
             <p class="defaultStyle" id="sixthStreet_Title" style="visibility: hidden;">Sixth Street</p>
             <img id="sixthStreet_IMG" src="backgroundImgs/locationImgs/1Sixth Street.png" style="visibility: hidden;">
             <input class="clues" type="button" id="sixclue" style="visibility: hidden;">
-            </section>
+        </section>
+        <section class="balletGroup" id="groupBallet">
+            <p class="defaultStyle" id="balletcluemsg">Ballet Twins</p>
+            <p class="defaultStyle" id="balletTwins_Title" style="visibility: hidden;">Ballet Twins</p>
+            <img id="balletTwins_IMG" src="backgroundImgs/locationImgs/2Ballet Twins.png" style="visibility: hidden;">
+            <input class="clues" type="button" id="balletclue" style="visibility: hidden;">
+        </section>
+        <section class="brantGroup" id="groupBrant">
+            <p class="defaultStyle" id="brantcluemsg1">Brant Street1</p>
+            <p class="defaultStyle" id="brantcluemsg2">Brant Street2</p>
+            <p class="defaultStyle" id="brantStreet_Title" style="visibility: hidden;">Brant Street</p>
+            <img id="brantStreet_IMG" src="backgroundImgs/locationImgs/3Brant Street.png" style="visibility: hidden;">
+            <input class="clues" type="button" id="brantclue1" style="visibility: hidden;">
+            <input class="clues" type="button" id="brantclue2" style="visibility: hidden;">
+        </section>
+        <section class="portGroup" id="groupPort">
+            <p class="defaultStyle" id="portcluemsg1">Port Elpis1</p>
+            <p class="defaultStyle" id="portcluemsg2">Port Elpis2</p>
+            <p class="defaultStyle" id="portElpis_Title" style="visibility: hidden;">Port Elpis</p>
+            <img id="portElpis_IMG" src="backgroundImgs/locationImgs/4Port Elpis.png" style="visibility: hidden;">
+            <input class="clues" type="button" id="portclue1" style="visibility: hidden;">
+            <input class="clues" type="button" id="portclue2" style="visibility: hidden;">
+        </section>
+        <section class="luminaGroup" id="groupLumina">
+            <p class="defaultStyle" id="luminacluemsg">Lumina Square</p>
+            <p class="defaultStyle" id="luminaSquare_Title" style="visibility: hidden;">Lumina Square</p>
+            <img id="luminaSquare_IMG" src="backgroundImgs/locationImgs/5Lumina.png" style="visibility: hidden;">
+            <input class="clues" type="button" id="luminaclue" style="visibility: hidden;">
+        </section>
     </section>
     
     <script src="part1.js" defer></script>

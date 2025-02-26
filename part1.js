@@ -183,15 +183,35 @@ const groupSixth = document.getElementsByClassName("groupSixth")
 backButton.addEventListener("click", function() {
     locationMenu()
     // HIDE ALL UI LOCATIONS
+    backButton.style.visibility = "hidden" // hide back button
     //sixth street
     sixthStreet_IMG.style.visibility = "hidden"
     sixthStreet_Title.style.visibility = "hidden"
     sixclue.style.visibility = "hidden"
-    backButton.style.visibility = "hidden"
+    sixcluemsg.style.visibility = "hidden"
+    //ballet twins
+    balletTwins_IMG.style.visibility = "hidden"
+    balletTwins_Title.style.visibility = "hidden"
+    balletclue.style.visibility = "hidden"
+    //brant street construction
+    brantStreet_IMG.style.visibility = "hidden"
+    brantStreet_Title.style.visibility = "hidden"
+    brantclue1.style.visibility = "hidden"
+    brantclue2.style.visibility = "hidden"
+    //port elpis
+    portElpis_IMG.style.visibility = "hidden"
+    portElpis_Title.style.visibility = "hidden"
+    portclue1.style.visibility = "hidden"
+    portclue2.style.visibility = "hidden"
+    //lumina square
+    luminaSquare_IMG.style.visibility = "hidden"
+    luminaSquare_Title.style.visibility = "hidden"
+    luminaclue.style.visibility = "hidden"
 })
 
 // making each story node/scenes
 
+// sixth street
 const sixthStreet_IMG = document.getElementById("sixthStreet_IMG")
 const sixthStreet_Title = document.getElementById("sixthStreet_Title")
 const sixclue = document.getElementById("sixclue")
@@ -201,22 +221,68 @@ sixthStreet.addEventListener("click", function(){
     sixthStreet_Title.style.visibility = "visible"
     sixclue.style.visibility = "visible"
     backButton.style.visibility = "visible"
+    sixthStreet_Active = false;
 })
 
+const sixcluemsg = document.getElementById("sixcluemsg")
+sixclue.addEventListener("click", function(){
+    sixcluemsg.style.visibility = "visible"
+})
+
+// ballet twins
+const balletTwins_IMG = document.getElementById("balletTwins_IMG")
+const balletTwins_Title = document.getElementById("balletTwins_Title")
+const balletclue = document.getElementById("balletclue")
 balletTwins.addEventListener("click", function(){
     clearLocationMenu()
+    balletTwins_IMG.style.visibility = "visible"
+    balletTwins_Title.style.visibility = "visible"
+    balletclue.style.visibility = "visible"
+    backButton.style.visibility = "visible"
+    balletTwins_Active = false;
 })
 
+// brant street
+const brantStreet_IMG = document.getElementById("brantStreet_IMG")
+const brantStreet_Title = document.getElementById("brantStreet_Title")
+const brantclue1 = document.getElementById("brantclue1")
+const brantclue2 = document.getElementById("brantclue1")
 brantStreet.addEventListener("click", function(){
     clearLocationMenu()
+    brantStreet_IMG.style.visibility = "visible"
+    brantStreet_Title.style.visibility = "visible"
+    brantclue1.style.visibility = "visible"
+    brantclue2.style.visibility = "visible"
+    backButton.style.visibility = "visible"
+    brantStreet_Active = false;
 })
 
+//port elpis
+const portElpis_IMG = document.getElementById("portElpis_IMG")
+const portElpis_Title = document.getElementById("portElpis_Title")
+const portclue1 = document.getElementById("portclue1")
+const portclue2 = document.getElementById("portclue2")
 portElpis.addEventListener("click", function(){
     clearLocationMenu()
+    portElpis_IMG.style.visibility = "visible"
+    portElpis_Title.style.visibility = "visible"
+    portclue1.style.visibility = "visible"
+    portclue2.style.visibility = "visible"
+    backButton.style.visibility = "visible"
+    portElpis_Active = false;
 })
 
+// luminasquare
+const luminaSquare_IMG = document.getElementById("luminaSquare_IMG")
+const luminaSquare_Title = document.getElementById("luminaSquare_Title")
+const luminaclue = document.getElementById("luminaclue")
 luminaSquare.addEventListener("click", function(){
     clearLocationMenu()
+    luminaSquare_IMG.style.visibility = "visible"
+    luminaSquare_Title.style.visibility = "visible"
+    luminaclue.style.visibility = "visible"
+    backButton.style.visibility = "visible"
+    luminaSquare_Active = false;
 })
 
 
@@ -241,8 +307,8 @@ function locationMenu() {
 
     // no repeating instructions
     if (counting >= 3) {
-        instructions.style.visibility = "visible"
-        letsfindClues.style.visibility = "visible"
+         instructions.style.visibility = "visible"
+         letsfindClues.style.visibility = "visible"
     }
 
     // location counter
