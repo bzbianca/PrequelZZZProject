@@ -379,7 +379,7 @@ body {
 #balletTwins_Title {
     font-size: 50px;
     position: absolute;
-    transform: translate(130%, -1750%);
+    transform: translate(135%, -2570%);
 }
 
 #balletTwins_IMG {
@@ -387,7 +387,7 @@ body {
     width: 1250px;
     padding: 20px;
     background-color: black;
-    transform: translate(0%, -140%);
+    transform: translate(0%, -215%);
 }
 
 #balletclue {
@@ -399,7 +399,7 @@ body {
 #brantStreet_Title {
     font-size: 50px;
     position: absolute;
-    transform: translate(130%, -1750%);
+    transform: translate(125%, -3945%);
 }
 
 #brantStreet_IMG {
@@ -407,7 +407,7 @@ body {
     width: 1250px;
     padding: 20px;
     background-color: black;
-    transform: translate(0%, -140%);
+    transform: translate(0%, -340%);
 }
 
 #brantclue1 {
@@ -422,7 +422,7 @@ body {
 #portElpis_Title {
     font-size: 50px;
     position: absolute;
-    transform: translate(130%, -1750%);
+    transform: translate(175%, -5350%);
 }
 
 #portElpis_IMG {
@@ -430,7 +430,7 @@ body {
     width: 1250px;
     padding: 20px;
     background-color: black;
-    transform: translate(0%, -140%);
+    transform: translate(0%, -465%);
 }
 
 #portclue1 {
@@ -446,7 +446,7 @@ body {
 #luminaSquare_Title {
     font-size: 50px;
     position: absolute;
-    transform: translate(130%, -1750%);
+    transform: translate(100%, -6620%);
 }
 
 #luminaSquare_IMG {
@@ -454,7 +454,7 @@ body {
     width: 1250px;
     padding: 20px;
     background-color: black;
-    transform: translate(0%, -140%);
+    transform: translate(0%, -580%);
 }
 
 #luminaclue {
