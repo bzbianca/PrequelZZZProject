@@ -251,6 +251,7 @@ body {
 
 /* STORY GAME */
 
+
 #cluesList {
     color: white;
     background-color: #363435;
@@ -271,6 +272,8 @@ body {
     font-size: 30px;
 }
 
+
+/* LOCATION MENU */
 .locationButtons {
     background-color: transparent;
     background-size: 110% 100%;
@@ -311,3 +314,56 @@ body {
     background-image: url(uiImgs/locationImgs/5District_Lumina_Square_Icon.png);
     transform: translate(70%, 120%);
 }
+
+/* BACK BUTTON */
+#backButton {
+    background-image: url(uiImgs/buttonImgs/Icon_Back.png);
+    background-size: contain;
+    background-color: transparent;
+    background-position: center;
+    position: absolute;
+    border: none;
+    padding: 120px;
+    visibility: visible;
+    transform: translate(-380%, -170%);
+}
+
+/* CLUES */
+
+.clues {
+    background-image: url(uiImgs/clueImgs/Icon_Hollow_Observation_Data.png);
+    background-size: 110% 100%;
+    background-color: transparent;
+    background-position: center;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    padding: 75px;
+    visibility: visible;
+}
+
+.clues:hover {
+    background-color: #aac200;
+}
+
+#sixclue {
+    transform: translate(-400%, -450%);
+}
+
+
+/* SIXTH STREET */
+
+#sixthStreet_Title {
+    font-size: 50px;
+    position: absolute;
+    transform: translate(130%, -1750%);
+}
+
+#sixthStreet_IMG {
+    border-radius: 20px;
+    width: 1250px;
+    padding: 20px;
+    background-color: black;
+    transform: translate(0%, -140%);
+}
+

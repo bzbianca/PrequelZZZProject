@@ -64,18 +64,42 @@ const luminaSquare = document.getElementById("luminaSquare")
 // LOCATION MENU FUNCTION //
 let locationCount = document.getElementById("locationCount")
 let counting = 3
+// check if the location was chosen
+let sixthStreet_Active = true;
+let balletTwins_Active = true;
+let brantStreet_Active = true;
+let portElpis_Active = true;
+let luminaSquare_Active = true;
+
 
 function locationMenu() {
-    sixthStreet.style.visibility = "visible"
-    balletTwins.style.visibility = "visible"
-    brantStreet.style.visibility = "visible"
-    portElpis.style.visibility = "visible"
-    luminaSquare.style.visibility = "visible"
-    instructions.style.visibility = "visible"
-    letsfindClues.style.visibility = "visible"
+    // checking if the locations were chosen or not
+    if (sixthStreet_Active === true) {
+        sixthStreet.style.visibility = "visible"
+    }
+    if (balletTwins_Active === true) {
+        balletTwins.style.visibility = "visible"
+    }
+    if (brantStreet_Active === true) {
+        brantStreet.style.visibility = "visible"
+    }
+    if (portElpis_Active === true) {
+        portElpis.style.visibility = "visible"
+    }
+    if (luminaSquare_Active === true) {
+        luminaSquare.style.visibility = "visible"
+    }
+
+    // no repeating instructions
+    if (counting >= 3) {
+        instructions.style.visibility = "visible"
+        letsfindClues.style.visibility = "visible"
+    }
+
+    // location counter
     locationCount.style.visibility = "visible"
 
-    locationCount.innerHTML = `Locations Left: 3 / ${counting}`
+    locationCount.innerHTML = `Locations Left: ${counting} / 3`
     //console.log(locationCount)
     counting -= 1
     //console.log(counting)
@@ -139,7 +163,93 @@ agentSelectButton.addEventListener("click", function(){
 
 })
 
+// clear the location menu
+function clearLocationMenu() {
+    sixthStreet.style.visibility = "hidden"
+    balletTwins.style.visibility = "hidden"
+    brantStreet.style.visibility = "hidden"
+    portElpis.style.visibility = "hidden"
+    luminaSquare.style.visibility = "hidden"
+    instructions.style.visibility = "hidden"
+    letsfindClues.style.visibility = "hidden"
+    locationCount.style.visibility = "hidden"
+}
+
+// go back to the location menu if the back button is pressed
+const backButton = document.getElementById("backButton")
+
+const groupSixth = document.getElementsByClassName("groupSixth")
+
+backButton.addEventListener("click", function() {
+    locationMenu()
+    // HIDE ALL UI LOCATIONS
+    //sixth street
+    sixthStreet_IMG.style.visibility = "hidden"
+    sixthStreet_Title.style.visibility = "hidden"
+    sixclue.style.visibility = "hidden"
+    backButton.style.visibility = "hidden"
+})
+
+// making each story node/scenes
+
+const sixthStreet_IMG = document.getElementById("sixthStreet_IMG")
+const sixthStreet_Title = document.getElementById("sixthStreet_Title")
+const sixclue = document.getElementById("sixclue")
+sixthStreet.addEventListener("click", function(){
+    clearLocationMenu()
+    sixthStreet_IMG.style.visibility = "visible"
+    sixthStreet_Title.style.visibility = "visible"
+    sixclue.style.visibility = "visible"
+    backButton.style.visibility = "visible"
+})
+
+balletTwins.addEventListener("click", function(){
+    clearLocationMenu()
+})
+
+brantStreet.addEventListener("click", function(){
+    clearLocationMenu()
+})
+
+portElpis.addEventListener("click", function(){
+    clearLocationMenu()
+})
+
+luminaSquare.addEventListener("click", function(){
+    clearLocationMenu()
+})
 
 
+// LOCATION MENU AGAIN TO ENSURE THERE ARE NO ERRORS //
+function locationMenu() {
+    // checking if the locations were chosen or not
+    if (sixthStreet_Active === true) {
+        sixthStreet.style.visibility = "visible"
+    }
+    if (balletTwins_Active === true) {
+        balletTwins.style.visibility = "visible"
+    }
+    if (brantStreet_Active === true) {
+        brantStreet.style.visibility = "visible"
+    }
+    if (portElpis_Active === true) {
+        portElpis.style.visibility = "visible"
+    }
+    if (luminaSquare_Active === true) {
+        luminaSquare.style.visibility = "visible"
+    }
 
+    // no repeating instructions
+    if (counting >= 3) {
+        instructions.style.visibility = "visible"
+        letsfindClues.style.visibility = "visible"
+    }
 
+    // location counter
+    locationCount.style.visibility = "visible"
+
+    locationCount.innerHTML = `Locations Left: ${counting} / 3`
+    //console.log(locationCount)
+    counting -= 1
+    //console.log(counting)
+}
