@@ -52,60 +52,6 @@ let instructions = document.getElementById("instructions")
 let letsfindClues = document.getElementById("letsfindClues")
 
 
-
-
-// LOCATION BUTTON VARIABLES //
-const sixthStreet = document.getElementById("sixthStreet")
-const balletTwins = document.getElementById("balletTwins")
-const brantStreet = document.getElementById("brantStreet")
-const portElpis = document.getElementById("portElpis")
-const luminaSquare = document.getElementById("luminaSquare")
-
-// LOCATION MENU FUNCTION //
-let locationCount = document.getElementById("locationCount")
-let counting = 3
-// check if the location was chosen
-let sixthStreet_Active = true;
-let balletTwins_Active = true;
-let brantStreet_Active = true;
-let portElpis_Active = true;
-let luminaSquare_Active = true;
-
-
-function locationMenu() {
-    // checking if the locations were chosen or not
-    if (sixthStreet_Active === true) {
-        sixthStreet.style.visibility = "visible"
-    }
-    if (balletTwins_Active === true) {
-        balletTwins.style.visibility = "visible"
-    }
-    if (brantStreet_Active === true) {
-        brantStreet.style.visibility = "visible"
-    }
-    if (portElpis_Active === true) {
-        portElpis.style.visibility = "visible"
-    }
-    if (luminaSquare_Active === true) {
-        luminaSquare.style.visibility = "visible"
-    }
-
-    // no repeating instructions
-    if (counting >= 3) {
-        instructions.style.visibility = "visible"
-        letsfindClues.style.visibility = "visible"
-    }
-
-    // location counter
-    locationCount.style.visibility = "visible"
-
-    locationCount.innerHTML = `Locations Left: ${counting} / 3`
-    //console.log(locationCount)
-    counting -= 1
-    //console.log(counting)
-}
-
-
 // agent selection process button press
 
 agentSelectButton.addEventListener("click", function(){
@@ -163,6 +109,23 @@ agentSelectButton.addEventListener("click", function(){
 
 })
 
+// LOCATION BUTTON VARIABLES //
+const sixthStreet = document.getElementById("sixthStreet")
+const balletTwins = document.getElementById("balletTwins")
+const brantStreet = document.getElementById("brantStreet")
+const portElpis = document.getElementById("portElpis")
+const luminaSquare = document.getElementById("luminaSquare")
+
+// LOCATION MENU FUNCTION //
+let locationCount = document.getElementById("locationCount")
+let counting = 3
+// check if the location was chosen
+let sixthStreet_Active = true;
+let balletTwins_Active = true;
+let brantStreet_Active = true;
+let portElpis_Active = true;
+let luminaSquare_Active = true;
+
 // clear the location menu
 function clearLocationMenu() {
     sixthStreet.style.visibility = "hidden"
@@ -175,13 +138,52 @@ function clearLocationMenu() {
     locationCount.style.visibility = "hidden"
 }
 
+function locationMenu() {
+    // checking if the locations were chosen or not
+    if (sixthStreet_Active === true) {
+        sixthStreet.style.visibility = "visible"
+    }
+    if (balletTwins_Active === true) {
+        balletTwins.style.visibility = "visible"
+    }
+    if (brantStreet_Active === true) {
+        brantStreet.style.visibility = "visible"
+    }
+    if (portElpis_Active === true) {
+        portElpis.style.visibility = "visible"
+    }
+    if (luminaSquare_Active === true) {
+        luminaSquare.style.visibility = "visible"
+    }
+
+    // no repeating instructions
+    if (counting >= 3) {
+        instructions.style.visibility = "visible"
+        letsfindClues.style.visibility = "visible"
+    }
+
+    // location counter
+    locationCount.style.visibility = "visible"
+
+    locationCount.innerHTML = `Locations Left: ${counting} / 3`
+    //console.log(locationCount)
+    counting -= 1
+    //console.log(counting)
+}
+
+
+
 // go back to the location menu if the back button is pressed
 const backButton = document.getElementById("backButton")
 
 const groupSixth = document.getElementsByClassName("groupSixth")
 
 backButton.addEventListener("click", function() {
-    locationMenu()
+    if (counting == 0) {
+        clearLocationMenu()
+    } else {
+        locationMenu()
+    }
     // HIDE ALL UI LOCATIONS
     backButton.style.visibility = "hidden" // hide back button
     //sixth street
@@ -189,6 +191,7 @@ backButton.addEventListener("click", function() {
     sixthStreet_Title.style.visibility = "hidden"
     sixclue.style.visibility = "hidden"
     sixcluemsg.style.visibility = "hidden"
+    sixcluemsg.innerHTML = "Sixth Street"
     //ballet twins
     balletTwins_IMG.style.visibility = "hidden"
     balletTwins_Title.style.visibility = "hidden"
@@ -233,6 +236,17 @@ sixthStreet.addEventListener("click", function(){
 const sixcluemsg = document.getElementById("sixcluemsg")
 sixclue.addEventListener("click", function(){
     sixcluemsg.style.visibility = "visible"
+
+    // checks which agent is active and pulls the dialogue for that specific character
+    if (mainAgent === "Corin") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Urhhhh. Mr. Lycaon, can I get noodles to eat?"<br>
+        "Sure Corin, buy one for To-Go for Ellen. She must be hungry while she has been out."<br>
+        "Okay!"<br>
+        "Here Mr. Lycaon! I told the Shop Owner to pick a random dish."<br>
+        "Oh let me see it."<br>
+        [Shark Fin Soup]`
+    }
 })
 
 // ballet twins
@@ -250,7 +264,14 @@ balletTwins.addEventListener("click", function(){
 
 const balletcluemsg = document.getElementById("balletcluemsg")
 balletclue.addEventListener("click", function(){
-    balletcluemsg.style.visibility = "visible"
+    sixcluemsg.style.visibility = "visible"
+
+    // checks which agent is active and pulls the dialogue for that specific character
+    if (mainAgent === "Corin") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Oh Ellen, where areee you?"<br>
+"Oh what's this? This must be some torn clothing from her skirt! She must be close by!"`
+    }
 })
 
 // brant street
@@ -271,12 +292,31 @@ brantStreet.addEventListener("click", function(){
 const brantcluemsg1 = document.getElementById("brantcluemsg1")
 const brantcluemsg2 = document.getElementById("brantcluemsg2")
 brantclue1.addEventListener("click", function(){
-    brantcluemsg1.style.visibility = "visible"
-    brantcluemsg2.style.visibility = "hidden"
+    sixcluemsg.style.visibility = "visible"
+    
+    // checks which agent is active and pulls the dialogue for that specific character
+    if (mainAgent === "Corin") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"With a noisy place like this, would Ellen even want to be here? She usually loves her quiet spaces"`
+    }
 })
 brantclue2.addEventListener("click", function(){
-    brantcluemsg1.style.visibility = "hidden"
-    brantcluemsg2.style.visibility = "visible"
+    sixcluemsg.style.visibility = "visible"
+    
+    // checks which agent is active and pulls the dialogue for that specific character
+    if (mainAgent === "Corin") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"再不会让 承诺被敷衍"<br>
+"不让真心被曲解"<br>
+"没有预演的人生 但"<br>
+"每一步 我有决定权"<br>
+"让瑕疵被发现"<br>
+"让美丽 被真实复原"<br>
+"我所了解的我 还没被了解"<br>
+"SHUT UP, WHY ARE YOU SINGING IN CATONESE CORIN?!"<br>
+"oh-uh sorry!!! It's Ellen's favorite Astra Yao song. Y'know, she's a big fan, maybe she would follow the music!"<br>
+"That's the dumbest idea I've ever heard. sing with a softer voice moving forward please."`
+    }
 })
 
 //port elpis
@@ -297,12 +337,29 @@ portElpis.addEventListener("click", function(){
 const portcluemsg1 = document.getElementById("portcluemsg1")
 const portcluemsg2 = document.getElementById("portcluemsg2")
 portclue1.addEventListener("click", function(){
-    portcluemsg2.style.visibility = "hidden"
-    portcluemsg1.style.visibility = "visible"
+    sixcluemsg.style.visibility = "visible"
+    
+    // checks which agent is active and pulls the dialogue for that specific character
+    if (mainAgent === "Corin") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Look at that bucket! There's so much dead fish..."<br>
+"Let's hope Ellen isn't one of the dead fish today"<br>
+"Corin, this is not the time to crack jokes!"<br>
+"Sorry!"`
+    }
 })
 portclue2.addEventListener("click", function(){
-    portcluemsg2.style.visibility = "visible"
-    portcluemsg1.style.visibility = "hidden"
+    sixcluemsg.style.visibility = "visible"
+    
+    // checks which agent is active and pulls the dialogue for that specific character
+    if (mainAgent === "Corin") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"ohhhh Ellen, where are you... *GASP* ELLEN SHE'S IN THE WATER! MR. LYCAON"<br>
+"I'm on it!"<br>
+*Lycaon swims down to the water. After a few secs*<br>
+"Corin, have you considered getting prescription glasses? This isn't Ellen. This is a seal."<br>
+"oh, ha ha, sorry..."`
+    }
 })
 
 // luminasquare
@@ -320,7 +377,15 @@ luminaSquare.addEventListener("click", function(){
 
 const luminacluemsg = document.getElementById("luminacluemsg")
 luminaclue.addEventListener("click", function(){
-    luminacluemsg.style.visibility = "visible"
+    sixcluemsg.style.visibility = "visible"
+    // checks which agent is active and pulls the dialogue for that specific character
+    if (mainAgent === "Corin") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Hmm, Ellen usually goes here to watch movies with her friends."<br>
+"What movie is airing today"<br>
+"Jaws."<br>
+"Yeah I don't think she's watching a movie right now."`
+    }
 })
 
 // LOCATION MENU AGAIN TO ENSURE THERE ARE NO ERRORS //

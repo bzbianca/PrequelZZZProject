@@ -371,8 +371,8 @@ body {
 }
 
 #sixcluemsg {
-    position: absolute;
-    transform: translate(242%, -200%);
+    position: relative;
+    transform: translate(0% , -300%);
 }
 
 /* BALLET TWINS */
