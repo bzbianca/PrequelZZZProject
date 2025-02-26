@@ -14,6 +14,18 @@ const ellenDesc = "A shark girl who is in highschool. During work, she is mostly
 const rinaDesc = "A very calm ghost woman. Her personality doesn't match well with most as she doesn't understand personal boundaries. Other than that, she will serve you with food and drinks with love and cares for her customers and companions very well.";
 
 
+let cluesList = document.getElementById("cluesList") // creating clueslist variable
+let addtoclueList = [] // list that will store the clues
+let clue; // global variable that will be used to store the clues from each location to be added to the list
+
+// refresh the clues list
+function refreshClues() {
+    cluesList.innerHTML = "Clues List:<br>"
+    for (let i = 0; i < addtoclueList.length; i++) {
+        cluesList.innerHTML += addtoclueList[i] + "<br>"
+    }
+}
+
 // Event listeners that checks which button is clicked
 corinButton.addEventListener("click", function(){
     starterIntro.src = "backgroundImgs/introImgs/1selectedCorin.jpeg";
@@ -240,12 +252,32 @@ sixclue.addEventListener("click", function(){
     // checks which agent is active and pulls the dialogue for that specific character
     if (mainAgent === "Corin") {
         //sixcluemsg.style.transform = "translate(0% , -300%)"
-        sixcluemsg.innerHTML = `"Urhhhh. Mr. Lycaon, can I get noodles to eat?"<br>
+        sixcluemsg.innerHTML = `"Uhhhh.. Mr. Lycaon, can I get noodles to eat?"<br>
         "Sure Corin, buy one for To-Go for Ellen. She must be hungry while she has been out."<br>
         "Okay!"<br>
         "Here Mr. Lycaon! I told the Shop Owner to pick a random dish."<br>
         "Oh let me see it."<br>
         [Shark Fin Soup]`
+        clue = "Shark Fin Soup";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Lycaon") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Maybe Ellen would come out if we brought some candy for her. She can probably sniff it a mile away!"<br>
+"Mr. Lycaon.. I think Ellen is a shark not a dog like you.."<br>
+"Let's try something else then, maybe fish bait?"`
+        clue = "Lollipop";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Rina") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Excuse me kind man. Have you seen this short highschool girl, hair short, personality that's just as feisty as a shark, does have a big shark tail, and has a large shark styled scissor? I'll repay you if you tell me all you know..."<br>
+"Uhhh.. I haven't seen any person with that description and I don't think you should be finding her.. creep. Ahhh get out of my space!"<br>
+*Man runs away*<br>
+"Aww looks like she really wasn't here. A timid man like that isn't Ellen's type. Let's go."`
+        clue = "Timid man";
+        addtoclueList.push(clue)
+        refreshClues()
     }
 })
 
@@ -271,6 +303,25 @@ balletclue.addEventListener("click", function(){
         //sixcluemsg.style.transform = "translate(0% , -300%)"
         sixcluemsg.innerHTML = `"Oh Ellen, where areee you?"<br>
 "Oh what's this? This must be some torn clothing from her skirt! She must be close by!"`
+        clue = "Cloth";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Lycaon") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Ellen always sleep on the job.. why would she come here, Lycaon?"<br>
+"I just thought she would clean up the place like I told her to. I guess not.."`
+        clue = "Pillow";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Rina") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Hmm, I wonder if she slept too long and stayed here..."<br>
+"Gahhh! Oh! It's just you Corin! I thought you were an ethereal!"<br>
+"Do I look that awful?"<br>
+"No no, it's fine. I just think you'll have a successful career in the circus. Hah!"`
+        clue = "Ethereal";
+        addtoclueList.push(clue)
+        refreshClues()
     }
 })
 
@@ -298,6 +349,27 @@ brantclue1.addEventListener("click", function(){
     if (mainAgent === "Corin") {
         //sixcluemsg.style.transform = "translate(0% , -300%)"
         sixcluemsg.innerHTML = `"With a noisy place like this, would Ellen even want to be here? She usually loves her quiet spaces"`
+        clue = "Headphones";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Lycaon") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"This place is always so dirty, I'll give it a good clean."<br>
+*Cleans to the point that even the ground is sparkling*<br>
+"Lycaon.. I think we are missing the point here."`
+        clue = "Spray Bottle";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Rina") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Wow, these construction workers work all day?"<br>
+"Yes, they do."<br>
+"Hey there. Take my new recipe, fish pie!!"<br>
+"Uhhh, excuse me, I'm guessing your with... her. Do you know what that is?"<br>
+"I apologize for her.. unprofessionalism. Rina, I think we should look somewhere else.."`
+        clue = "Fish pie";
+        addtoclueList.push(clue)
+        refreshClues()
     }
 })
 brantclue2.addEventListener("click", function(){
@@ -309,13 +381,30 @@ brantclue2.addEventListener("click", function(){
         sixcluemsg.innerHTML = `"再不会让 承诺被敷衍"<br>
 "不让真心被曲解"<br>
 "没有预演的人生 但"<br>
-"每一步 我有决定权"<br>
-"让瑕疵被发现"<br>
-"让美丽 被真实复原"<br>
-"我所了解的我 还没被了解"<br>
 "SHUT UP, WHY ARE YOU SINGING IN CATONESE CORIN?!"<br>
 "oh-uh sorry!!! It's Ellen's favorite Astra Yao song. Y'know, she's a big fan, maybe she would follow the music!"<br>
 "That's the dumbest idea I've ever heard. sing with a softer voice moving forward please."`
+        clue = "Microphone";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Lycaon") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Since we are here at the site, I have prepared a few items."<br>
+"Mr. Lycaon.. Are these really necessary?"<br>
+"Yes, Corin. They are necessary"<br>
+"[Cleaning Supplies]"`
+        clue = "Cleaning Supplies";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Rina") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Ugh the noise and this confusing layout, I don't believe she'll be here."<br>
+"Oh and who is this hunk of a guy. What's your name?"<br>
+"Uhhh, ben?"<br>
+"Ben... Ben... huh. Yea okay see ya. Corin, Lycaon, let's move another place for more clues."`
+        clue = "Ben";
+        addtoclueList.push(clue)
+        refreshClues()
     }
 })
 
@@ -346,6 +435,25 @@ portclue1.addEventListener("click", function(){
 "Let's hope Ellen isn't one of the dead fish today"<br>
 "Corin, this is not the time to crack jokes!"<br>
 "Sorry!"`
+        clue = "Bucket";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Lycaon") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Catching fish? Eating fish? I don't get the hype around it."<br>
+*Pulls out with his bare paws and eats it"<br>
+"Oh Lycaon, please do that again so I can use fish for my latest recipe, fish pie!!"`
+        clue = "Fish";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Rina") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Hmm though I would love to look for Ellen anywhere, let's keep our stay here quick. The smell of this port is going to stink my outfit and it will be a shame. It gets already stinks if I stay near Ellen all day. I mean, she is a fish!"<br>
+"Rina, this is not the time to make rude comments of Ellen. We are here to look for her"<br>
+"Oohhh okay. I'll just stand 50 feet away from the port and you two can look for clues."`
+        clue = "Smelly outfit";
+        addtoclueList.push(clue)
+        refreshClues()
     }
 })
 portclue2.addEventListener("click", function(){
@@ -359,6 +467,27 @@ portclue2.addEventListener("click", function(){
 *Lycaon swims down to the water. After a few secs*<br>
 "Corin, have you considered getting prescription glasses? This isn't Ellen. This is a seal."<br>
 "oh, ha ha, sorry..."`
+        clue = "Prescription Glasses";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Lycaon") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Mr. Lycaon, I think I see Ellen at the top of the lighthouse!"<br>
+"Corin, you might be right. That must be her!"<br>
+"Oh, its just you Rina."<br>
+"Do I look like a highschool girl?!"`
+        clue = "Light bulb";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Rina") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Rina, come join us and help find clues."<br>
+"Nope, not moving any more forward. I might get splashed by water!"<br>
+Wave of water splash the side of the port and sprayed over Rina.<br>
+"....aaaaagggggGGAHGGAGHHHHHHHH"`
+        clue = "Salt water";
+        addtoclueList.push(clue)
+        refreshClues()
     }
 })
 
@@ -385,6 +514,24 @@ luminaclue.addEventListener("click", function(){
 "What movie is airing today"<br>
 "Jaws."<br>
 "Yeah I don't think she's watching a movie right now."`
+        clue = "Movie Ticket";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Lycaon") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Ellen loves bringing back teamilk to our commissions."<br>
+"She does but she loves my fish pie more!!"`
+        clue = "Teamilk";
+        addtoclueList.push(clue)
+        refreshClues()
+    } else if (mainAgent === "Rina") {
+        //sixcluemsg.style.transform = "translate(0% , -300%)"
+        sixcluemsg.innerHTML = `"Hmm.. I wonder why many are staring at me? Corin, do you know?"<br>
+"Well uhm you are floating above the ground. And other various things..."<br>
+"Oh! haha thank you Corin for telling me!" `
+        clue = "Floating ability";
+        addtoclueList.push(clue)
+        refreshClues()
     }
 })
 
