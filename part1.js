@@ -193,20 +193,26 @@ backButton.addEventListener("click", function() {
     balletTwins_IMG.style.visibility = "hidden"
     balletTwins_Title.style.visibility = "hidden"
     balletclue.style.visibility = "hidden"
+    balletcluemsg.style.visibility = "hidden"
     //brant street construction
     brantStreet_IMG.style.visibility = "hidden"
     brantStreet_Title.style.visibility = "hidden"
     brantclue1.style.visibility = "hidden"
     brantclue2.style.visibility = "hidden"
+    brantcluemsg1.style.visibility = "hidden"
+    brantcluemsg2.style.visibility = "hidden"
     //port elpis
     portElpis_IMG.style.visibility = "hidden"
     portElpis_Title.style.visibility = "hidden"
     portclue1.style.visibility = "hidden"
     portclue2.style.visibility = "hidden"
+    portcluemsg1.style.visibility = "hidden"
+    portcluemsg2.style.visibility = "hidden"
     //lumina square
     luminaSquare_IMG.style.visibility = "hidden"
     luminaSquare_Title.style.visibility = "hidden"
     luminaclue.style.visibility = "hidden"
+    luminacluemsg.style.visibility = "hidden"
 })
 
 // making each story node/scenes
@@ -242,11 +248,16 @@ balletTwins.addEventListener("click", function(){
     balletTwins_Active = false;
 })
 
+const balletcluemsg = document.getElementById("balletcluemsg")
+balletclue.addEventListener("click", function(){
+    balletcluemsg.style.visibility = "visible"
+})
+
 // brant street
 const brantStreet_IMG = document.getElementById("brantStreet_IMG")
 const brantStreet_Title = document.getElementById("brantStreet_Title")
 const brantclue1 = document.getElementById("brantclue1")
-const brantclue2 = document.getElementById("brantclue1")
+const brantclue2 = document.getElementById("brantclue2")
 brantStreet.addEventListener("click", function(){
     clearLocationMenu()
     brantStreet_IMG.style.visibility = "visible"
@@ -255,6 +266,17 @@ brantStreet.addEventListener("click", function(){
     brantclue2.style.visibility = "visible"
     backButton.style.visibility = "visible"
     brantStreet_Active = false;
+})
+
+const brantcluemsg1 = document.getElementById("brantcluemsg1")
+const brantcluemsg2 = document.getElementById("brantcluemsg2")
+brantclue1.addEventListener("click", function(){
+    brantcluemsg1.style.visibility = "visible"
+    brantcluemsg2.style.visibility = "hidden"
+})
+brantclue2.addEventListener("click", function(){
+    brantcluemsg1.style.visibility = "hidden"
+    brantcluemsg2.style.visibility = "visible"
 })
 
 //port elpis
@@ -272,6 +294,17 @@ portElpis.addEventListener("click", function(){
     portElpis_Active = false;
 })
 
+const portcluemsg1 = document.getElementById("portcluemsg1")
+const portcluemsg2 = document.getElementById("portcluemsg2")
+portclue1.addEventListener("click", function(){
+    portcluemsg2.style.visibility = "hidden"
+    portcluemsg1.style.visibility = "visible"
+})
+portclue2.addEventListener("click", function(){
+    portcluemsg2.style.visibility = "visible"
+    portcluemsg1.style.visibility = "hidden"
+})
+
 // luminasquare
 const luminaSquare_IMG = document.getElementById("luminaSquare_IMG")
 const luminaSquare_Title = document.getElementById("luminaSquare_Title")
@@ -285,6 +318,10 @@ luminaSquare.addEventListener("click", function(){
     luminaSquare_Active = false;
 })
 
+const luminacluemsg = document.getElementById("luminacluemsg")
+luminaclue.addEventListener("click", function(){
+    luminacluemsg.style.visibility = "visible"
+})
 
 // LOCATION MENU AGAIN TO ENSURE THERE ARE NO ERRORS //
 function locationMenu() {
