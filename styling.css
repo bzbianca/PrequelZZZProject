@@ -321,6 +321,7 @@ body {
     background-size: contain;
     background-color: transparent;
     background-position: center;
+    z-index: 2;
     position: fixed;
     border: none;
     padding: 120px;
@@ -391,7 +392,7 @@ body {
 }
 
 #balletclue {
-    transform: translate(-400%, -450%);
+    transform: translate(-400%, -550%);
 }
 
 /* BRANT STREET */
