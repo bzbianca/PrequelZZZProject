@@ -59,9 +59,12 @@ let rinaAgent = document.getElementById("rinaAgent"); // Rina's agent button
 ////////////////////// VARIABLE MAKING FOR AGENT SELECTION & MAIN STORY//////////////////////
 
 // message ids into variables
+let timeToPick = document.getElementById("timeToPick")
+let agentSelect = document.getElementById("agentSelect")
 let uhOh = document.getElementById("uhOh")
 let instructions = document.getElementById("instructions")
 let letsfindClues = document.getElementById("letsfindClues")
+
 
 
 // agent selection process button press
@@ -148,6 +151,9 @@ function clearLocationMenu() {
     instructions.style.visibility = "hidden"
     letsfindClues.style.visibility = "hidden"
     locationCount.style.visibility = "hidden"
+    uhOh.style.visibility = "hidden"
+    timeToPick.style.visibility = "hidden"
+    agentSelect.style.visibility = "hidden"
 }
 
 function locationMenu() {
@@ -183,7 +189,38 @@ function locationMenu() {
     //console.log(counting)
 }
 
+// ending variables
+const endingGroup = document.getElementById("endingGroup")
+const ending_Title = document.getElementById("ending_Title")
+const ending_text = document.getElementById("ending_text")
+const ending_IMG = document.getElementById("ending_IMG")
+//ending_IMG.remove()
+// endings function
+function findEllenEndings() {
+    console.log(mainAgent)
+    console.log("ending")
+    ending_Title.style.visibility = "visible"
+    ending_text.style.visibility = "visible"
+    ending_IMG.style.visibility = "visible"
 
+    // ending_Title.classList.add("transformed")
+    // ending_text.classList.add("transformed")
+    // ending_IMG.classList.add("transformed")
+    //ending_IMG.add()
+    // //endingGroup.style.transform = "translate(0%, -525%)"
+    // ending_Title.style.transform = "translate(0%, -1095%)"
+    // ending_text.style.transform = "translate(0%, -2995%)"
+    // ending_IMG.style.transform = "translate(0%, -795%)"
+    // corin is default in ending
+    // lycaon ending
+    if (mainAgent === "Lycaon") {
+        ending_IMG.src = "backgroundImgs/endingImgs/LycaonEnding.png"
+        ending_text.innerHTML = "Lycaon analyzes all of the clues and realized that he doesn't know Ellen that well even after going to all those parent conferences for her education. But remembering what was scheduled, he realized that she was doing a commission in the Brant Street Construction Site Hollow. Go into the Hollow and find her!"
+    } else if (mainAgent === "Rina") {
+        ending_IMG.src = "backgroundImgs/endingImgs/RinaEnding.png"
+        ending_text.innerHTML = "Rina analyzes all of the clues and realized that Ellen is actually at the Brant Street Construction Site! From all the interactions, it just came to her motherly instincts that she needs help!! Go into the Hollow and find her!"
+    }
+}
 
 // go back to the location menu if the back button is pressed
 const backButton = document.getElementById("backButton")
@@ -193,6 +230,7 @@ const groupSixth = document.getElementsByClassName("groupSixth")
 backButton.addEventListener("click", function() {
     if (counting == 0) {
         clearLocationMenu()
+        findEllenEndings()
     } else {
         locationMenu()
     }

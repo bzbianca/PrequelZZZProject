@@ -494,3 +494,29 @@ body {
     position: absolute;
     transform: translate(190%, -7700%);
 }
+
+.ending {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30px;
+    transform: translate(0%, -325%);
+}
+/*
+#ending {
+    transform: translate(0%, -525%);
+}
+
+.transformed {
+    transform: translate(0%, -525%);
+}
+*/
+#ending_IMG {
+    border-radius: 20px;
+    width: 1250px;
+    padding: 20px;
+    background-color: black;
+}
