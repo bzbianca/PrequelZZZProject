@@ -13,12 +13,12 @@
         <p id="title" class="defaultStyle">Where is Ellen?</p>
         <p id="introTitle" class="titleStyle">Character Introductions</p>
         <section class="imgBox">
-            <img id="introChars" src="backgroundImgs/introImgs/1selectedCorin.jpeg">
+            <img id="introChars" src="backgroundImgs/introImgs/1selectedCorin.jpeg"> <!--intro background for each agent, default corin-->
             <div class="selectContainer">
-                <input type="button" id="selectCorin">
-                <input type="button" id="selectLycaon">
-                <input type="button" id="selectEllen">
-                <input type="button" id="selectRina">
+                <input type="button" id="selectCorin"> <!--button for agent introduction-->
+                <input type="button" id="selectLycaon"> <!--button for agent introduction-->
+                <input type="button" id="selectEllen"> <!--button for agent introduction-->
+                <input type="button" id="selectRina"> <!--button for agent introduction-->
             </div>
         </section>
         <section class="introDesc" id="descIntro">
@@ -28,16 +28,16 @@
 
     <section class="agents" id="agentSelection">
         <p class="defaultStyle" id="timeToPick">Now that you know everyone, it's time to select a character to play as! Click the Agent Select Button to get started.</p>
-        <input id="agentSelect" type="image" src="uiImgs/buttonImgs/Icon_Agents.png">
+        <input id="agentSelect" type="image" src="uiImgs/buttonImgs/Icon_Agents.png"> <!--agent selection start button-->
         <p class="defaultStyle" id="uhOh" style="visibility: hidden;">That's weird Ellen isn't on here? Let's pick a character first then we'll go and find out where she is.</p>
         <br>
         <div class="agentButtons">
-            <input type="button" id="corinAgent" style="visibility: hidden;">
-            <input type="button" id="lycaonAgent" style="visibility: hidden;">
-            <input type="button" id="rinaAgent" style="visibility: hidden;">
+            <input type="button" id="corinAgent" style="visibility: hidden;"> <!--agent select button-->
+            <input type="button" id="lycaonAgent" style="visibility: hidden;"> <!--agent select button-->
+            <input type="button" id="rinaAgent" style="visibility: hidden;"> <!--agent select button-->
         </div>
-        <p class="defaultStyle" id="youPicked" style="font-size: 30px;"></p>
-        <p class="defaultStyle" id="currentAgent" style="font-size: 30px;"></p>
+        <p class="defaultStyle" id="youPicked" style="font-size: 30px;"></p> <!--prints who you picked-->
+        <p class="defaultStyle" id="currentAgent" style="font-size: 30px;"></p> <!--prints current agent-->
     </section>
     <br>
     <br>
@@ -49,54 +49,54 @@
         <h1 class="defaultStyle" style="visibility: hidden;">So where is she?</h1>
         <p class="defaultStyle" id="instructions" style="visibility: hidden;">Huh? Where is Ellen? Maybe she went off the Hollows. Seems like we have to go look for her.</p>
         <p class="defaultStyle" id="letsfindClues" style="visibility: hidden;">Let's look for clues. Only 3 locations can be explored.</p>
-        <p class="defaultStyle" id="locationCount" style="visibility: hidden;">Locations Left: </p>
+        <p class="defaultStyle" id="locationCount" style="visibility: hidden;">Locations Left: </p> <!--uses javascript to count how many locations-->
         <br><br><br><br><br><br><br><br><br><br>
         <!--Locations-->
-        <input class="locationButtons" type="button" id="sixthStreet">
-        <input class="locationButtons" type="button" id="balletTwins">
-        <input class="locationButtons" type="button" id="brantStreet">
-        <input class="locationButtons" type="button" id="portElpis">
-        <input class="locationButtons" type="button" id="luminaSquare">
+        <input class="locationButtons" type="button" id="sixthStreet"> <!--location menu button-->
+        <input class="locationButtons" type="button" id="balletTwins"> <!--location menu button-->
+        <input class="locationButtons" type="button" id="brantStreet"> <!--location menu button-->
+        <input class="locationButtons" type="button" id="portElpis"> <!--location menu button-->
+        <input class="locationButtons" type="button" id="luminaSquare"> <!--location menu button-->
         <br><br><br><br><br><br><br><br><br><br><br><br>
         <section class="sixthGroup" id="groupSixth">
-            <p class="defaultStyle" id="sixthStreet_Title" style="visibility: hidden;">Sixth Street</p>
-            <img id="sixthStreet_IMG" src="backgroundImgs/locationImgs/1Sixth Street.png" style="visibility: hidden;">
-            <input class="clues" type="button" id="sixclue" style="visibility: hidden;">
-            <p class="defaultStyle" id="sixcluemsg" style="visibility: hidden;">Sixth Street</p>
+            <p class="defaultStyle" id="sixthStreet_Title" style="visibility: hidden;">Sixth Street</p>  <!--title-->
+            <img id="sixthStreet_IMG" src="backgroundImgs/locationImgs/1Sixth Street.png" style="visibility: hidden;"> <!--background location-->
+            <input class="clues" type="button" id="sixclue" style="visibility: hidden;">  <!--clue button-->
+            <p class="defaultStyle" id="sixcluemsg" style="visibility: hidden;">Sixth Street</p> <!--message/dialogue text box for all locations-->
         </section>
         <section class="balletGroup" id="groupBallet">
-            <p class="defaultStyle" id="balletcluemsg" style="visibility: hidden;">Ballet Twins</p>
-            <p class="defaultStyle" id="balletTwins_Title" style="visibility: hidden;">Ballet Twins</p>
-            <img id="balletTwins_IMG" src="backgroundImgs/locationImgs/2Ballet Twins.png" style="visibility: hidden;">
-            <input class="clues" type="button" id="balletclue" style="visibility: hidden;">
+            <p class="defaultStyle" id="balletcluemsg" style="visibility: hidden;">Ballet Twins</p> <!--placeholder-->
+            <p class="defaultStyle" id="balletTwins_Title" style="visibility: hidden;">Ballet Twins</p> <!--title-->
+            <img id="balletTwins_IMG" src="backgroundImgs/locationImgs/2Ballet Twins.png" style="visibility: hidden;"> <!--background location-->
+            <input class="clues" type="button" id="balletclue" style="visibility: hidden;"> <!--clue button-->
         </section>
         <section class="brantGroup" id="groupBrant">
-            <p class="defaultStyle" id="brantcluemsg1" style="visibility: hidden;">Brant Street1</p>
-            <p class="defaultStyle" id="brantcluemsg2" style="visibility: hidden;">Brant Street2</p>
-            <p class="defaultStyle" id="brantStreet_Title" style="visibility: hidden;">Brant Street</p>
-            <img id="brantStreet_IMG" src="backgroundImgs/locationImgs/3Brant Street.png" style="visibility: hidden;">
-            <input class="clues" type="button" id="brantclue1" style="visibility: hidden;">
-            <input class="clues" type="button" id="brantclue2" style="visibility: hidden;">
+            <p class="defaultStyle" id="brantcluemsg1" style="visibility: hidden;">Brant Street1</p> <!--placeholder-->
+            <p class="defaultStyle" id="brantcluemsg2" style="visibility: hidden;">Brant Street2</p> <!--placeholder-->
+            <p class="defaultStyle" id="brantStreet_Title" style="visibility: hidden;">Brant Street</p> <!--title-->
+            <img id="brantStreet_IMG" src="backgroundImgs/locationImgs/3Brant Street.png" style="visibility: hidden;"> <!--background location-->
+            <input class="clues" type="button" id="brantclue1" style="visibility: hidden;"> <!--clue button-->
+            <input class="clues" type="button" id="brantclue2" style="visibility: hidden;"> <!--clue button-->
         </section>
         <section class="portGroup" id="groupPort">
-            <p class="defaultStyle" id="portcluemsg1" style="visibility: hidden;">Port Elpis1</p>
-            <p class="defaultStyle" id="portcluemsg2" style="visibility: hidden;">Port Elpis2</p>
-            <p class="defaultStyle" id="portElpis_Title" style="visibility: hidden;">Port Elpis</p>
-            <img id="portElpis_IMG" src="backgroundImgs/locationImgs/4Port Elpis.png" style="visibility: hidden;">
-            <input class="clues" type="button" id="portclue1" style="visibility: hidden;">
-            <input class="clues" type="button" id="portclue2" style="visibility: hidden;">
+            <p class="defaultStyle" id="portcluemsg1" style="visibility: hidden;">Port Elpis1</p> <!--placeholder-->
+            <p class="defaultStyle" id="portcluemsg2" style="visibility: hidden;">Port Elpis2</p> <!--placeholder-->
+            <p class="defaultStyle" id="portElpis_Title" style="visibility: hidden;">Port Elpis</p> <!--title-->
+            <img id="portElpis_IMG" src="backgroundImgs/locationImgs/4Port Elpis.png" style="visibility: hidden;"> <!--background location-->
+            <input class="clues" type="button" id="portclue1" style="visibility: hidden;"> <!--clue button-->
+            <input class="clues" type="button" id="portclue2" style="visibility: hidden;"> <!--clue button-->
         </section>
         <section class="luminaGroup" id="groupLumina">
-            <p class="defaultStyle" id="luminacluemsg" style="visibility: hidden;">Lumina Square</p>
-            <p class="defaultStyle" id="luminaSquare_Title" style="visibility: hidden;">Lumina Square</p>
-            <img id="luminaSquare_IMG" src="backgroundImgs/locationImgs/5Lumina.png" style="visibility: hidden;">
-            <input class="clues" type="button" id="luminaclue" style="visibility: hidden;">
+            <p class="defaultStyle" id="luminacluemsg" style="visibility: hidden;">Lumina Square</p> <!--placeholder-->
+            <p class="defaultStyle" id="luminaSquare_Title" style="visibility: hidden;">Lumina Square</p> <!--title-->
+            <img id="luminaSquare_IMG" src="backgroundImgs/locationImgs/5Lumina.png" style="visibility: hidden;"> <!--background location-->
+            <input class="clues" type="button" id="luminaclue" style="visibility: hidden;"> <!--clue button-->
         </section>
     </section>
     <section id="ending" class="ending">
-        <h1 id="ending_Title" class="defaultStyle" style="visibility: hidden;">Let's go find Ellen!</h1>
-        <p id="ending_text" class="defaultStyle" style="visibility: hidden;">Corin analyzes all of the clues and realized that even after all those times that she slept on outside the coffee shop that she must be at the Brant Street Construction Site especially when its the worst place to sleep with the loud noises and rough atmosphere. She would definitely stay awake there! Go into the Hollow and find her!</p>
-        <img id="ending_IMG" src="backgroundImgs/endingImgs/CorinEnding.png" style="visibility: hidden;">
+        <!--ending title for all agents--><h1 id="ending_Title" class="defaultStyle" style="visibility: hidden;">Let's go find Ellen!</h1>
+    <!--ending message for all agents--><p id="ending_text" class="defaultStyle" style="visibility: hidden;">Corin analyzes all of the clues and realized that even after all those times that she slept on outside the coffee shop that she must be at the Brant Street Construction Site especially when its the worst place to sleep with the loud noises and rough atmosphere. She would definitely stay awake there! Go into the Hollow and find her!</p>
+        <img id="ending_IMG" src="backgroundImgs/endingImgs/CorinEnding.png" style="visibility: hidden;"> <!--background ending for all agents-->
     </section>
     <script src="part1.js" defer></script>
 </body>

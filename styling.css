@@ -371,10 +371,7 @@ body {
     transform: translate(-400%, -270%);
 }
 
-#sixcluemsg {
-    position: relative;
-    transform: translate(0% , -300%);
-}
+
 
 /* BALLET TWINS */
 
@@ -396,10 +393,6 @@ body {
     transform: translate(-700%, -780%);
 }
 
-#balletcluemsg {
-    position: absolute;
-    transform: translate(245%, -2080%);
-}
 
 /* BRANT STREET */
 
@@ -421,19 +414,11 @@ body {
     transform: translate(-600%, -1100%);
 }
 
-#brantcluemsg1 {
-    position: absolute;
-    transform: translate(210%, -3950%);
-}
 
 #brantclue2 {
     transform: translate(-250%, -1400%);
 }
 
-#brantcluemsg2 {
-    position: absolute;
-    transform: translate(210%, -3950%);
-}
 
 
 /* PORT ELPIS */
@@ -456,19 +441,11 @@ body {
     transform: translate(-650%, -1850%);
 }
 
-#portcluemsg1 {
-    position: absolute;
-    transform: translate(290%, -5828%);
-}
 
 #portclue2 {
     transform: translate(-250%, -1600%);
 }
 
-#portcluemsg2 {
-    position: absolute;
-    transform: translate(290%, -5828%);
-}
 
 /* BALLET TWINS */
 
@@ -490,10 +467,6 @@ body {
     transform: translate(-350%, -2100%);
 }
 
-#luminacluemsg {
-    position: absolute;
-    transform: translate(190%, -7700%);
-}
 
 .ending {
     position: relative;
