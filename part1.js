@@ -219,14 +219,24 @@ function findEllenEndings() { // print ending function
     }
 }
 
+// press space bar to display ending
+document.addEventListener("keydown", function(event) {
+    if (event.code === "Space") {
+        findEllenEndings()
+    }
+})
+
 // go back to the location menu if the back button is pressed
 const backButton = document.getElementById("backButton")
+
+const pressSpace = document.getElementById("pressSpace") // press space message variable
 
 // back button is pressed
 backButton.addEventListener("click", function() {
     if (counting == 0) { // clear location menu and call ending function if there is not more locations left
+        pressSpace.style.visibility = "visible"
         clearLocationMenu()
-        findEllenEndings()
+        //findEllenEndings()
     } else {
         locationMenu() // go back to location menu
     }

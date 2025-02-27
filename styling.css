@@ -493,3 +493,10 @@ body {
     padding: 20px;
     background-color: black;
 }
+
+#pressSpace {
+    font-size: 30px;
+    position: relative;
+    transform: translate(0%, -9025%);
+    text-align: center;
+}
